@@ -1,0 +1,43 @@
+{
+  "Name": "English",
+
+  // Menu
+  "Menu.Settings.Caption": "Settings",
+  "Menu.Metrics.Caption": "Metrics",
+
+  // Settings
+  "Menu.Settings.ChangeTranslationEnablement": "Online Translation Enabled",
+  "Menu.Settings.Languages.Caption": "Languages",
+  "Menu.Settings.Themes.Caption": "Themes",
+
+  "Menu.Settings.Theme.Dark.Caption": "Dark",
+  "Menu.Settings.Theme.Light.Caption": "Light",
+
+  // Metrics
+  "Menu.Metrics.Subtitles.Caption": "Subtitles",
+  "Menu.Metrics.Narration.Caption": "Narration",
+  "Menu.Metrics.Tips.Caption": "Tips",
+
+  // Close File
+  "File.Close.UnsavedChanges.Caption": "Unsaved changes",
+  "File.Close.UnsavedChanges.Text": "You have unsaved changes. Do you want to save now?",
+
+  // Find Scene Dialog
+  "Dialog.Find.Scene.Caption": "Find Scene",
+
+  // Find Tip Dialog
+  "Dialog.Find.Tip.Caption": "Find Tip",
+
+  // Metric Dialog
+  "Dialog.Metric.Loading.Caption": "Loading...",
+  "Dialog.Metric.ShowWarnings.Caption": "Show Warnings",
+
+  // Metric Subtitle Dialog
+  "Dialog.Metric.Subtitle.Caption": "Subtitle metrics",
+
+  // Metric Narration Dialog
+  "Dialog.Metric.Narration.Caption": "Narration metrics",
+
+  // Metric Tip Dialog
+  "Dialog.Metric.Tip.Caption": "Tip metrics"
+}

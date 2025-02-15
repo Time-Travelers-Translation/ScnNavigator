@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\tutorial_bg.png" />
+    <None Remove="Resources\Images\tutorial_bg2.png" />
+    <None Remove="Resources\Images\tutorial_bg3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Core.Contract\CrossCutting.Core.Contract.csproj" />
+    <ProjectReference Include="..\UI.ScnNavigator.Resources.Contract\UI.ScnNavigator.Resources.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\notojp.ttf">
+      <LogicalName>notojp.ttf</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fonts\roboto.ttf">
+      <LogicalName>roboto.ttf</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\back_btn.png">
+      <LogicalName>back_btn.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\decision.png">
+      <LogicalName>decision.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\decision_arrow.png">
+      <LogicalName>decision_arrow.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\decision_bg.png">
+      <LogicalName>decision_bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\hint_btn.png">
+      <LogicalName>hint_btn.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\hint_caption.png">
+      <LogicalName>hint_caption.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\narration.png">
+      <LogicalName>narration.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\outline_bg.png">
+      <LogicalName>outline_bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\time_lock.png">
+      <LogicalName>time_lock.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\tip_bg.png">
+      <LogicalName>tip_bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\tip_icon.png">
+      <LogicalName>tip_icon.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\tip_title.png">
+      <LogicalName>tip_title.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\help_bg.png">
+      <LogicalName>help_bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\title_bg.png">
+      <LogicalName>title_bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\tutorial_bg.png">
+      <LogicalName>tutorial_bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\tutorial_bg2.png">
+      <LogicalName>tutorial_bg2.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\tutorial_bg3.png">
+      <LogicalName>tutorial_bg3.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Langs\en.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

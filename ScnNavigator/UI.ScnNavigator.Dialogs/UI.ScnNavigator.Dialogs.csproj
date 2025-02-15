@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LanguageVersion>12</LanguageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Core.Contract\CrossCutting.Core.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Business.TranslationManagement.Contract\Logic.Business.TranslationManagement.Contract.csproj" />
+    <ProjectReference Include="..\UI.ScnNavigator.Abstract\UI.ScnNavigator.Abstract.csproj" />
+    <ProjectReference Include="..\UI.ScnNavigator.Components.Contract\UI.ScnNavigator.Components.Contract.csproj" />
+    <ProjectReference Include="..\UI.ScnNavigator.Components\UI.ScnNavigator.Components.csproj" />
+    <ProjectReference Include="..\UI.ScnNavigator.Dialogs.Contract\UI.ScnNavigator.Dialogs.Contract.csproj" />
+    <ProjectReference Include="..\UI.ScnNavigator.Resources.Contract\UI.ScnNavigator.Resources.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

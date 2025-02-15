@@ -1,0 +1,75 @@
+[
+  {
+    "Name": "Logic.Business.TimeTravelersManagement",
+    "Entries": [
+      {
+        "Key": "Platform",
+        "Value": "Ctr"
+      },
+      {
+        "Key": "OriginalPath",
+        "Value": ""
+      },
+      {
+        "Key": "PatchPath",
+        "Value": ""
+      },
+      {
+        "Key": "PatchMapPath",
+        "Value": "map.json"
+      }
+    ]
+  },
+  {
+    "Name": "Logic.Business.TranslationManagement",
+    "Entries": [
+      {
+        "Key": "TranslationSheetId",
+        "Value": ""
+      }
+    ]
+  },
+  {
+    "Name": "Logic.Domain.GoogleSheetsManagement",
+    "Entries": [
+      {
+        "Key": "FlowType",
+        "Value": "OAuth2"
+      },
+      {
+        "Key": "Scope",
+        "Value": "Write"
+      }
+    ]
+  },
+  {
+    "Name": "Logic.Domain.GoogleSheetsManagement.OAuth2",
+    "Entries": [
+      {
+        "Key": "TokenPath",
+        "Value": "oauth.json"
+      },
+      {
+        "Key": "ClientId",
+        "Value": ""
+      },
+      {
+        "Key": "ClientSecret",
+        "Value": ""
+      }
+    ]
+  },
+  {
+    "Name": "UI.ScnNavigator.Resources",
+    "Entries": [
+      {
+        "Key": "LocalizationPath",
+        "Value": "resources/langs"
+      },
+      {
+        "Key": "DefaultLocale",
+        "Value": "en"
+      }
+    ]
+  }
+]

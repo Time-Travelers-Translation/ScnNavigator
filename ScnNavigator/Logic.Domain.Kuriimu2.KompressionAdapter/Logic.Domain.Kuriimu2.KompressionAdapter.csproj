@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<RootNamespace>Logic.Domain.Kuriimu2.KompressionAdapter</RootNamespace>
+	<AssemblyName>Logic.Domain.Kuriimu2.KompressionAdapter</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kompression" Version="2.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Core.Contract\CrossCutting.Core.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Domain.Kuriimu2.KompressionAdapter.Contract\Logic.Domain.Kuriimu2.KompressionAdapter.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

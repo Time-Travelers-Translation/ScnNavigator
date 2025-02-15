@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<RootNamespace>Logic.Domain.GoogleSheetsManagement</RootNamespace>
+	<AssemblyName>Logic.Domain.GoogleSheetsManagement</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Core.Contract\CrossCutting.Core.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Domain.GoogleSheetsManagement.Contract\Logic.Domain.GoogleSheetsManagement.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

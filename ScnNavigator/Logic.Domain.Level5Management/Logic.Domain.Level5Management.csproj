@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<RootNamespace>Logic.Domain.Level5Management</RootNamespace>
+	<AssemblyName>Logic.Domain.Level5Management</AssemblyName>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logic.Domain.Kuriimu2.KomponentAdapter.Contract\Logic.Domain.Kuriimu2.KomponentAdapter.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Domain.Kuriimu2.KompressionAdapter.Contract\Logic.Domain.Kuriimu2.KompressionAdapter.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Domain.Kuriimu2.KryptographyAdapter.Contract\Logic.Domain.Kuriimu2.KryptographyAdapter.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Domain.Level5Management.Contract\Logic.Domain.Level5Management.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

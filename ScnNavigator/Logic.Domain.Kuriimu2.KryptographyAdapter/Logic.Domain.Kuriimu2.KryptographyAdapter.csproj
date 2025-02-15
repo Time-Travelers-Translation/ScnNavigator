@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<RootNamespace>Logic.Domain.Kuriimu2.KryptographyAdapter</RootNamespace>
+	<AssemblyName>Logic.Domain.Kuriimu2.KryptographyAdapter</AssemblyName>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kryptography" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logic.Domain.Kuriimu2.KryptographyAdapter.Contract\Logic.Domain.Kuriimu2.KryptographyAdapter.Contract.csproj" />
+  </ItemGroup>
+
+</Project>
