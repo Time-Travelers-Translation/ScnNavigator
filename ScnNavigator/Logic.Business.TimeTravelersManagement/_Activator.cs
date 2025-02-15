@@ -51,6 +51,8 @@ namespace Logic.Business.TimeTravelersManagement
 
             kernel.Register<IStoryboardManager, StoryboardManager>(ActivationScope.Unique);
 
+            kernel.Register<ITtpCallReader, TtpCallReader>(ActivationScope.Unique);
+
             kernel.Register<ICharacterProvider, CharacterProvider>(ActivationScope.Unique);
 
             kernel.RegisterConfiguration<TimeTravelersManagementConfiguration>();

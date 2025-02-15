@@ -26,6 +26,10 @@
       {
         "Key": "TranslationSheetId",
         "Value": ""
+      },
+      {
+        "Key": "TranslationPostGameSheetId",
+        "Value": ""
       }
     ]
   },

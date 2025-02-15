@@ -1,5 +1,6 @@
 ﻿using CrossCutting.Core.Contract.Aspects;
 using ImGui.Forms.Controls.Base;
+using Logic.Business.TimeTravelersManagement.Contract.DataClasses;
 using Logic.Domain.GraphVizManagement.Contract.DataClasses;
 using Logic.Domain.Level5Management.Contract.DataClasses.Scene;
 using UI.ScnNavigator.Components.Contract.DataClasses;
@@ -17,5 +18,6 @@ namespace UI.ScnNavigator.Components.Contract
         Component CreateTutorialsForm(TutorialTitlesData tutorialTitles);
         Component CreateOutlineForm(OutlineData outlines);
         Component CreateStaffrollForm(StaffrollData staffroll);
+        Component CreateTtpCallForm(TtpCallData callData);
     }
 }

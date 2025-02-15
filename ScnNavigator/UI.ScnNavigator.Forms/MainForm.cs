@@ -34,6 +34,7 @@ namespace UI.ScnNavigator.Forms
         private readonly IStringResourceProvider _stringProvider;
 
         private readonly IScnReader _scnReader;
+        private readonly ITtpCallReader _ttpCallReader;
         private readonly IConfigurationReader<RawConfigurationEntry> _configReader;
         private readonly IEventTextParser _textParser;
         private readonly ITranslationSettingsProvider _translationSettingsProvider;
@@ -48,7 +49,8 @@ namespace UI.ScnNavigator.Forms
         private bool _enabled = true;
 
         public MainForm(IEventBroker eventBroker, IComponentFactory componentFactory, IDialogFactory dialogFactory,
-            IStringResourceProvider stringProvider, ILocalizer localizer, IScnReader scnReader, IConfigurationReader<RawConfigurationEntry> configReader,
+            IStringResourceProvider stringProvider, ILocalizer localizer, 
+            IScnReader scnReader, ITtpCallReader ttpCallReader, IConfigurationReader<RawConfigurationEntry> configReader,
             IEventTextParser textParser, ITranslationSettingsProvider translationSettingsProvider, IFormSettingsProvider formSettingsProvider)
         {
             InitializeComponent(localizer, stringProvider, translationSettingsProvider, formSettingsProvider);
@@ -61,6 +63,7 @@ namespace UI.ScnNavigator.Forms
             _stringProvider = stringProvider;
 
             _scnReader = scnReader;
+            _ttpCallReader = ttpCallReader;
             _configReader = configReader;
             _textParser = textParser;
             _translationSettingsProvider = translationSettingsProvider;
@@ -209,6 +212,9 @@ namespace UI.ScnNavigator.Forms
                     if (Path.GetFileName(filePath).StartsWith("staffroll"))
                         return LoadStaffRoll(filePath);
 
+                    if (Path.GetFileName(filePath).StartsWith("sp_") || Path.GetFileName(filePath).StartsWith("cmn_"))
+                        return LoadTtpCall(filePath);
+
                     break;
             }
 
@@ -292,6 +298,14 @@ namespace UI.ScnNavigator.Forms
             return _componentFactory.CreateStaffrollForm(data);
         }
 
+        private Component? LoadTtpCall(string filePath)
+        {
+            if (!TryLoadTtpCall(filePath, out TtpCallData? callData))
+                return null;
+
+            return _componentFactory.CreateTtpCallForm(callData!);
+        }
+
         private bool TryLoadSceneNavigator(string filePath, out SceneNavigator? sceneNavigator)
         {
             sceneNavigator = null;
@@ -319,6 +333,23 @@ namespace UI.ScnNavigator.Forms
 
                 Configuration<RawConfigurationEntry> config = _configReader.Read(fileStream, StringEncoding.Sjis);
                 eventTextConfig = _textParser.Parse(config);
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool TryLoadTtpCall(string filePath, out TtpCallData? ttpCallData)
+        {
+            ttpCallData = null;
+
+            try
+            {
+                using Stream fileStream = File.OpenRead(filePath);
+                ttpCallData = _ttpCallReader.Read(fileStream, StringEncoding.Sjis);
             }
             catch
             {

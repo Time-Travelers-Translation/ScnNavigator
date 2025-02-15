@@ -30,6 +30,7 @@ namespace Logic.Business.TranslationManagement
             kernel.Register<IDecisionTranslationManager, DecisionTranslationManager>(ActivationScope.Unique);
             kernel.Register<IHintTranslationManager, HintTranslationManager>(ActivationScope.Unique);
             kernel.Register<IOutlineTranslationManager, OutlineTranslationManager>(ActivationScope.Unique);
+            kernel.Register<IPostStoryTranslationManager, PostStoryTranslationManager>(ActivationScope.Unique);
             kernel.Register<IRouteTranslationManager, RouteTranslationManager>(ActivationScope.Unique);
             kernel.Register<ISpeakerTranslationManager, SpeakerTranslationManager>(ActivationScope.Unique);
             kernel.Register<IStaffrollTranslationManager, StaffrollTranslationManager>(ActivationScope.Unique);

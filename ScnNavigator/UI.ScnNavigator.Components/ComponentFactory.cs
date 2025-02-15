@@ -60,5 +60,11 @@ namespace UI.ScnNavigator.Components
             return _kernel.Get<StaffrollForm>(
                 new ConstructorParameter("data", staffroll));
         }
+
+        public Component CreateTtpCallForm(TtpCallData callData)
+        {
+            return _kernel.Get<TtpCallForm>(
+                new ConstructorParameter("data", callData));
+        }
     }
 }

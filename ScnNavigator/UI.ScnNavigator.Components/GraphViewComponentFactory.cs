@@ -24,5 +24,12 @@ namespace UI.ScnNavigator.Components
                 new ConstructorParameter("graph", graph),
                 new ConstructorParameter("nodes", nodes));
         }
+
+        public Component CreateCallGraphView(Graph graph, IList<Node<TtpCallSectionData>> nodes)
+        {
+            return _kernel.Get<CallGraphView>(
+                new ConstructorParameter("graph", graph),
+                new ConstructorParameter("nodes", nodes));
+        }
     }
 }

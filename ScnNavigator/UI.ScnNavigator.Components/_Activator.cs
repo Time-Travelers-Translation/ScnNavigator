@@ -54,6 +54,7 @@ namespace UI.ScnNavigator.Components
             kernel.RegisterToSelf<TutorialsForm>();
             kernel.RegisterToSelf<OutlinesForm>();
             kernel.RegisterToSelf<StaffrollForm>();
+            kernel.RegisterToSelf<TtpCallForm>();
 
             kernel.RegisterToSelf<BadEndPreview>();
             kernel.RegisterToSelf<DecisionPreview>();
@@ -69,6 +70,7 @@ namespace UI.ScnNavigator.Components
             kernel.RegisterToSelf<MetricTipPreview>();
 
             kernel.RegisterToSelf<SceneGraphView>();
+            kernel.RegisterToSelf<CallGraphView>();
 
             kernel.RegisterConfiguration<ScnNavigatorComponentsConfiguration>();
         }
