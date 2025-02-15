@@ -13,29 +13,65 @@ namespace CrossCutting.Core.Configuration.File
     {
         public IEnumerable<ConfigCategory> Load()
         {
-            string cfgPath = GetConfigPath();
-            if (!System.IO.File.Exists(cfgPath))
+            var categories = GetConfigurationCategories();
+            if (categories == null)
                 yield break;
 
-            string json = System.IO.File.ReadAllText(cfgPath);
-            if (string.IsNullOrEmpty(json))
-                yield break;
+            var userCategories = GetUserConfigurationCategories();
 
-            JsonSerializer serializer = new();
-            var result = serializer.Deserialize<List<ConfigCategory>>(json);
-
-            foreach (ConfigCategory category in result)
+            foreach (ConfigCategory category in categories)
             {
+                var userCategory = userCategories?.FirstOrDefault(x => x.Name == category.Name);
+
                 foreach (ConfigEntry entry in category.Entries)
+                {
+                    var userEntry = userCategory?.Entries.FirstOrDefault(x => x.Key == entry.Key);
+                    if (userEntry != null)
+                        entry.Value = userEntry.Value;
+
                     entry.Category = category;
+                }
 
                 yield return category;
             }
         }
 
+        private List<ConfigCategory>? GetConfigurationCategories()
+        {
+            string cfgPath = GetConfigPath();
+            if (!System.IO.File.Exists(cfgPath))
+                return null;
+
+            string json = System.IO.File.ReadAllText(cfgPath);
+            if (string.IsNullOrEmpty(json))
+                return null;
+
+            JsonSerializer serializer = new();
+            return serializer.Deserialize<List<ConfigCategory>>(json);
+        }
+
+        private List<ConfigCategory>? GetUserConfigurationCategories()
+        {
+            string cfgPath = GetUserConfigPath();
+            if (!System.IO.File.Exists(cfgPath))
+                return null;
+
+            string json = System.IO.File.ReadAllText(cfgPath);
+            if (string.IsNullOrEmpty(json))
+                return null;
+
+            JsonSerializer serializer = new();
+            return serializer.Deserialize<List<ConfigCategory>>(json);
+        }
+
         private string GetConfigPath()
         {
             return Path.Combine(Path.GetDirectoryName(Environment.ProcessPath)!, "config.json");
+        }
+
+        private string GetUserConfigPath()
+        {
+            return Path.Combine(Path.GetDirectoryName(Environment.ProcessPath)!, "config.json.user");
         }
     }
 }

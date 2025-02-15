@@ -9,7 +9,7 @@ namespace Logic.Business.TimeTravelersManagement.Paths
 
         public GamePathProvider(TimeTravelersManagementConfiguration config)
         {
-            _platformType = Enum.Parse<PlatformType>(config.Platform);
+            _platformType = config.Platform;
         }
 
         public string GetPlatformPath()

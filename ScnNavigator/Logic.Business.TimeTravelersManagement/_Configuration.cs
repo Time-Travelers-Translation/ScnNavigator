@@ -1,11 +1,12 @@
 ﻿using CrossCutting.Core.Contract.Configuration.DataClasses;
+using Logic.Domain.Level5Management.Contract.Enums;
 
 namespace Logic.Business.TimeTravelersManagement
 {
     public class TimeTravelersManagementConfiguration
     {
         [ConfigMap("Logic.Business.TimeTravelersManagement", "Platform")]
-        public virtual string Platform { get; set; }
+        public virtual PlatformType Platform { get; set; }
 
         [ConfigMap("Logic.Business.TimeTravelersManagement", "OriginalPath")]
         public virtual string OriginalPath { get; set; }
