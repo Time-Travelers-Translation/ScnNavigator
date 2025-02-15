@@ -128,8 +128,7 @@ namespace Logic.Business.RenderingManagement
 
             var options = new RenderOptions
             {
-                TextColor = Color.FromRgb(0xE4, 0x9C, 0x6B),
-                DrawBoundingBoxes = true
+                TextColor = Color.FromRgb(0xE4, 0x9C, 0x6B)
             };
 
             return GetTextRenderer<ITextRenderer>(options, layoutCreator);

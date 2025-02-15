@@ -30,25 +30,8 @@
     ]
   },
   {
-    "Name": "Logic.Domain.GoogleSheetsManagement",
-    "Entries": [
-      {
-        "Key": "FlowType",
-        "Value": "OAuth2"
-      },
-      {
-        "Key": "Scope",
-        "Value": "Write"
-      }
-    ]
-  },
-  {
     "Name": "Logic.Domain.GoogleSheetsManagement.OAuth2",
     "Entries": [
-      {
-        "Key": "TokenPath",
-        "Value": "oauth.json"
-      },
       {
         "Key": "ClientId",
         "Value": ""
@@ -62,10 +45,6 @@
   {
     "Name": "UI.ScnNavigator.Resources",
     "Entries": [
-      {
-        "Key": "LocalizationPath",
-        "Value": "resources/langs"
-      },
       {
         "Key": "DefaultLocale",
         "Value": "en"
