@@ -6,9 +6,9 @@ namespace Logic.Business.TranslationManagement.InternalContract.DataClasses
     {
         [Column("A")]
         public int Index { get; set; }
-        [Column("H")]
+        [Column("I")]
         public string TranslatedTitle { get; set; }
-        [Column("K")]
+        [Column("L")]
         public string Translation { get; set; }
     }
 }
