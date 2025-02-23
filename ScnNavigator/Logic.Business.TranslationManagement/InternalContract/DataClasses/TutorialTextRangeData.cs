@@ -4,9 +4,9 @@ namespace Logic.Business.TranslationManagement.InternalContract.DataClasses
 {
     internal class TutorialTextRangeData
     {
-        [Column("C")]
+        [Column("D")]
         public string TranslatedTitle { get; set; }
-        [Column("F")]
+        [Column("G")]
         public string? Translation { get; set; }
     }
 }

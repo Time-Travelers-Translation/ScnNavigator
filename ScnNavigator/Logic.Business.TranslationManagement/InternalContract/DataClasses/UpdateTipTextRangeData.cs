@@ -5,9 +5,9 @@ namespace Logic.Business.TranslationManagement.InternalContract.DataClasses
     internal class UpdateTipTextRangeData
     {
         public int Row { get; set; }
-        [Column("H")]
+        [Column("I")]
         public string TranslatedTitle { get; set; }
-        [Column("K")]
+        [Column("L")]
         public string Translation { get; set; }
     }
 }
