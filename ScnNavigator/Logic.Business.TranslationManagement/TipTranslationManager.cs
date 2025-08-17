@@ -107,8 +107,8 @@ namespace Logic.Business.TranslationManagement
 
                 await _sheetManager.UpdateRangeAsync(textRange, TableName_, titleCellStart, titleCellEnd);
 
-                CellIdentifier textCellStart = CellIdentifier.Parse($"K{textRange[0].Row}");
-                CellIdentifier textCellEnd = CellIdentifier.Parse($"K{textRange[^1].Row}");
+                CellIdentifier textCellStart = CellIdentifier.Parse($"L{textRange[0].Row}");
+                CellIdentifier textCellEnd = CellIdentifier.Parse($"L{textRange[^1].Row}");
 
                 await _sheetManager.UpdateRangeAsync(textRange, TableName_, textCellStart, textCellEnd);
             }
@@ -117,7 +117,7 @@ namespace Logic.Business.TranslationManagement
         private async Task PopulateTipData()
         {
             CellIdentifier startCell = CellIdentifier.Parse("A2");
-            CellIdentifier endCell = CellIdentifier.Parse($"K{TipEndRow_}");
+            CellIdentifier endCell = CellIdentifier.Parse($"L{TipEndRow_}");
 
             TipTextRangeData[]? range = await _sheetManager.GetRangeAsync<TipTextRangeData>(TableName_, startCell, endCell);
             if (range == null)
